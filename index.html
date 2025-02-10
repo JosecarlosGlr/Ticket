@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cuadrado{
+            margin: 50px;
+            border: 4px solid black;
+            width: 250px;
+            height: 400px;
+            overflow: auto;
+        }
+        li{
+            margin: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ticket de caja</h1>
+    <label for="Objeto">Objeto: </label><input type="text" id="Objeto">
+    <label for="Precio">Precio: </label><input type="number" id="Precio">
+    <button onclick="compra()">Enviar</button>
+    <div id="cuadrado">
+        <ol>
+    </div>
+    <h1 id="costo">0</h1>
+    <script>
+    function compra(){
+        let objeto=document.getElementById("Objeto").value;
+        let precio=document.getElementById("Precio").value;
+        let coste=document.getElementById("costo").value;
+        let cadenaItem = "<li>" + objeto + "</li>";
+        document.getElementById("cuadrado").innerHTML=document.getElementById("cuadrado").innerHTML+cadenaItem+"</ol>";
+        document.getElementById("costo").innerHTML=precio+coste;
+    }
+    </script>
+
+</body>
+</html>
