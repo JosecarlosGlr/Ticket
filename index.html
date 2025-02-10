@@ -28,12 +28,15 @@
     <h1 id="costo">0</h1>
     <script>
     function compra(){
+        //agregar descripción del ticket
         let objeto=document.getElementById("Objeto").value;
-        let precio=document.getElementById("Precio").value;
-        let coste=document.getElementById("costo").value;
         let cadenaItem = "<li>" + objeto + "</li>";
         document.getElementById("cuadrado").innerHTML=document.getElementById("cuadrado").innerHTML+cadenaItem+"</ol>";
-        document.getElementById("costo").innerHTML=precio+coste;
+        //calcular suma del ticket
+        let precio=Number(document.getElementById("Precio").value);
+        let coste=Number(document.getElementById("costo").innerHTML);
+        let nuevocosto=precio+coste;
+        document.getElementById("costo").innerHTML=nuevocosto;
     }
     </script>
 
